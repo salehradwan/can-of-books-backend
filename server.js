@@ -8,11 +8,11 @@ const getBooks = require('./controller/book.controller');
 const cors = require('cors'); // enable the communication between the frontend and the backend
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/myFavouriteBooks',  
+mongoose.connect('mongodb://localhost:27017/myFavouriteBook',  
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
-seedUserData();
+// seedUserData();
 
 app.get('/books', getBooks);
 app.listen(PORT, () => {

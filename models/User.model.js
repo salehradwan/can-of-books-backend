@@ -11,7 +11,7 @@ const userModel = mongoose.model('users', userSchema);
 
 const seedUserData = () => {
     const newUser = new userModel({
-        email: 'saleh-radwan@outlook.com',
+        email: 'aburadwansaleh@gmail.com',
         books: [
             {   name: 'Aleph',
                 description: 'The book tells the story of his own epiphany while on a pilgrimage through Asia in 2006 on the Trans-Siberian Railway',
@@ -30,11 +30,8 @@ const seedUserData = () => {
            
         ]
     });
+    newUser.save();
+};
 
-    console.log(newUser);
-
-    // newUser.save();
-
-}
-
-module.exports = userModel;
+module.exports = seedUserData;
+// module.exports = userModel;
