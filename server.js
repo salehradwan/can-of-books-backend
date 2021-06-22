@@ -13,7 +13,6 @@ mongoose.connect('mongodb://localhost:27017/myFavouriteBook',
 );
 
 // seedUserData();
-
 app.get('/books', getBooks);
 app.listen(PORT, () => {
     console.log(`Server started on ${PORT}`);
