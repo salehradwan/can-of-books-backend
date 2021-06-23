@@ -20,7 +20,7 @@ mongoose.connect(process.env.MANGO_URL,
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
-seedUserData();
+// seedUserData();
 
 // Our Book Routes
 // Read route, get all the books by the user email
