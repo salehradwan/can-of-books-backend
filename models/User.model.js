@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 const bookSchema = require('./Book.model');
 
 const userSchema = new mongoose.Schema({
-    email: { type: String },
+    email: { unique: true,
+        type: String 
+    },
     books: [bookSchema]
 });
 
