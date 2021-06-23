@@ -27,8 +27,9 @@ const createBook = (request, response) => {
             // here we are going to add the new cat
             // console.log('inside create book', userData);
             userData.books.push({ name: bookName,
-                description: description,
-                status: status});
+                description,
+                status
+            });
             userData.save();
             response.json(userData);
         }
@@ -45,8 +46,9 @@ const updateBook = (request, response) => {
             response.send(error)
         } else {
             userData.books.splice(bookIndex, 1, { name: bookName,
-                description: description,
-                status: status});
+                description,
+                status
+            });
             userData.save();
             response.send(userData)
         }
