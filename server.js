@@ -16,11 +16,11 @@ app.use(cors());
 // this method is used to decode our request body sent by the post or put methods
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/myFavouriteBook',  
+mongoose.connect(process.env.MANGO_URL,  
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
-// seedUserData();
+seedUserData();
 
 // Our Book Routes
 // Read route, get all the books by the user email
